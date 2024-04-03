@@ -1,6 +1,6 @@
 version: '3'
 
-service:
+services:
   mariadb:
     container_name: mariadb
     networks:
@@ -50,17 +50,18 @@ service:
 volumes:
     wordpress:
         driver: local
-        drivers_opt:
+        driver_opts:
           type: 'none'
           o:  'bind'
-        device: '/Users/mescobar/data/wordpress'
+          device: '/Users/mescobar/data/wordpress'
     mariadb:
         driver: local
-        driver_opt:
+        driver_opts:
           type: 'none'
           o: 'bind'
-        device: '/User/mescobar/data/mariadb'
+          device: '/User/mescobar/data/mariadb'
 
-network:
+networks:
     inception:
-    driver: bridge
+      driver: bridge
+
