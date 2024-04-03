@@ -10,7 +10,7 @@ RUN mkdir -p /etc/nginx/ssl
 RUN apt install openssl -y
 RUN openssl req -x509 -days 365 -nodes -newkey rsa:4096 \
 	-keyout /etc/nginx/ssl/inception.key \
-	-out /etc/nginx/ssl/inception.crt -sha256 -subj "/CN=ldeville.42.fr"
+	-out /etc/nginx/ssl/inception.crt -sha256 -subj "/CN=mescobar.42.fr"
 
 RUN mkdir -p /var/run/nginx
 
